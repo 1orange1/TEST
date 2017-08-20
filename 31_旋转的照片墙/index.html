@@ -3,9 +3,114 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body, html{
+            width: 100%;
+            height: 100%;
+        }
+        #container{
+            width: 100%;
+            height: 100%;
+            background: url(img/bg.jpg);
+            position: relative;
+        }
+        #container .img{
+            width: 125px;
+            height: 125px;
+            border: 5px solid #fff;
+            box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.5);
+            position:absolute;
+            top: -500px;
+            left: -500px;
+            -webkit-transition: all 1s ease;
+            -moz-transition: all 1s ease;
+            -ms-transition: all 1s ease;
+            -o-transition: all 1s ease;
+            transition: all 1s ease;
+            cursor: pointer;
+        }
+        #container .img span{
+            width: 100%;
+            height: 100%;
+            display: block;
+            opacity: 0;
+            transition: all 1s ease;
+        }
 
+
+    </style>
 </head>
 <body>
+<div id="container"></div>
+<div id="next"></div>
+<div id="prev"></div>
+<script>
+    (function () {
+        var ROW = 4, COL = 6, NUM = ROW * COL;
+        var count = 0;//计数器，记录当前图片加载成功的 数量。
+        var oContainer = document.getElementById("container");
+        var oPrev = document.getElementById("prev");
+        var oNext = document.getElementById("next");
+        var aImg;
+        var fGapCol;
+        var fGapRow;
+        var iImgWidth;
+        var iImgHeight;
+        for(var i=0;i<NUM;i++){
+            var oBigImg = new Image();
+            oBigImg.onload = function () {
+                count++;
+                if(count == NUM * 2){
+                    loadSuccess();
+                }
+            };
+            oBigImg.src = "img/"+(i+1)+".jpg";
 
+            var oThumbImg = new Image();
+            oThumbImg.onload = function () {
+                count++;
+                if(count == NUM *2){
+                    loadSuccess();
+                }
+            }
+            oThumbImg.src = "img/thumbs/"+ (i+1) +".jpg";
+        }
+
+        var index = 0; //1 ~ 24
+        //预加载成功以后 执行函数。
+        function loadSuccess() {
+            //创建24个div，并设置背景图片。
+            for (var i = 0; i < ROW; i++) {
+                for (var j = 0; j < COL; j++) {
+                    index++;
+                    var oDiv = document.createElement("div");
+                    oDiv.className = "img";
+                    oDiv.style.backgroundImage = "url(img/thumbs/" + index + ".jpg)"
+                    //给div对象自定义属性pos，保存坐标
+                    oDiv.pos = {
+                        col: j,
+                        row: i
+                    };
+                    oDiv.index = index;
+                    oDiv.innerHTML = "<span></span>";
+                    oContainer.appendChild(oDiv);
+                }
+            }
+            //计算每个div的位置
+            aImg = oContainer.getElementsByTagName("div");
+            iImgWidth = aImg[0].offsetWidth;
+            iImgHeight = aImg[0].offsetHeight;
+            fGapRow = (oContainer.offsetHeight - iImgHeight * COL) / (COL + 1);
+            fGapCol = (oContainer.offsetWidth - iImgWidth * COL) / (COL + 1);
+            for(var i = 0; i<NUM;i++){
+                
+            }
+        }
+    })();
+</script>
 </body>
 </html>
