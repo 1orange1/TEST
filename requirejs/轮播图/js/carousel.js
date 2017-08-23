@@ -17,7 +17,7 @@ define(["jquery"],function () {
     }
     Carousel.prototype.init = function(){
         //拼装dom结构
-        this.$container.append(this.$tabs).append(this.$imgs).append(this.$arrows);
+        this. $container.append(this.$tabs).append(this.$imgs).append(this.$arrows);
         this.$arrows.append(this.$prev).append(this.$next);
         for(var i=0; i<this.defaultSettings.imgArr.length; i++){
             var $li = $("<li></li>").html(i + 1);
@@ -35,6 +35,14 @@ define(["jquery"],function () {
         this.$prev.addClass(this.defaultSettings.arrowPos);
         this.$next.addClass(this.defaultSettings.arrowPos);
         $(this.defaultSettings.selector).append(this.$container);
+
+        $("img",this.$imgs).eq(0).addClass("selected");
+        $("li",this.$tabs).eq(0).addClass("selected");
+
+        $("li",this.$tabs).on("mouseover",function () {
+            $(this).addClass("selected").siblings().removeClass("selected");
+            $("img",this.$imgs).eq($(this).index()).addClass("selected").siblings().removeClass("selected");
+        })
 
     };
     return Carousel;
