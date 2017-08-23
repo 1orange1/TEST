@@ -45,5 +45,5 @@ define(["jquery"],function () {
         })
 
     };
-    return Carousel;
+    return Carousel;  
 })
