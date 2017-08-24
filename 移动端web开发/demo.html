@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #container{
+            width: 960px;
+            margin: 0 auto;
+        }
+        h3{
+            width: 960px;
+            height: 100px;
+            background-color: #e8e8e8;
+            text-align: center;
+            line-height: 100px;
+            color: white;
+            margin: 30px auto;
+        }
+        #banner{
+            width: 960px;
+        }
+        img{
+            width: 960px;
+            float: left;
+        }
+        #content{
+            width:960px;
+            overflow: hidden;
+        }
+        #left,#right{
+            height: 300px;
+            display:table;
+        }
+        #left{
+            width: 60%;
+            text-align: center;
+            background-color:green;
+            float:left;
+        }
+        #right{
+            float:right;
+            width: 35%;
+            background-color: red;
+        }
+        p{
+            display:table-cell;
+            vertical-align:middle;
+            text-align: center;
+        }
+        @media(max-width:962px) {
+            h3 {
+                width: 100%;
+            }
+            #container{
+                width: 100%;
+            }
+            #banner{
+                width: 100%;
+            }
+            img{
+                width: 100%;
+            }
+            #content{
+                width: 100%;
+            }
+        }
+        @media (max-width:488px ) {
+            #left,#right{
+                width: 100%;
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+            <h3>页头</h3>
+        </div>
+        <div id="nav">
+            <h3>导航</h3>
+        </div>
+        <div id="banner">
+            <img src="01.jpg" alt="">
+        </div>
+        <div id="content">
+            <div id="left">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sem erat, egestas quis luctus ut, rhoncus vitae risus. Integer venenatis libero sit amet sapien dictum, quis bibendum mi volutpat. Cras pretium quam quis magna facilisis, eget feugiat nisi lacinia.</p>
+            </div>
+            <div id="right">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sem erat, egestas quis luctus ut, rhoncus vitae risus. Integer venenatis libero sit amet sapien dictum, quis bibendum mi volutpat. Cras pretium quam quis magna facilisis, eget feugiat nisi lacinia.</p>
+            </div>
+        </div>
+        <div id="footer">
+            <h3>页脚</h3>
+        </div>
+    </div>
+</body>
+</html>
