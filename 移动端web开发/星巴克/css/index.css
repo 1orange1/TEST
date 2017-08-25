@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.head .left{
+    background-color: blue;
+    width: 600px;
+    height: 100px;
+}
+.head .toggle{
+    background-color: #000;
+    margin: 0 15px;
+    width: 570px;
+    height: 46px;
+}
+.head input{
+    display: block;
+    padding: 5px 5px 0;
+    height: 25px;
+    width: 40px;
+}
