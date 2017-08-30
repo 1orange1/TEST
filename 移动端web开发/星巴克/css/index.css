@@ -6,16 +6,37 @@
     background-color: blue;
     width: 600px;
     height: 100px;
+    overflow: hidden;
+    float: left;
 }
-.head .toggle{
-    background-color: #000;
-    margin: 0 15px;
+.head .left .toggle{
+    margin:27px auto;
     width: 570px;
     height: 46px;
 }
-.head input{
+.head .left .menu{
     display: block;
-    padding: 5px 5px 0;
     height: 25px;
     width: 40px;
+    text-align: center;
+}
+.head .left span{
+    display: block;
+    width: 40px;
+    height: 21px;
+    cursor: pointer;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    text-align:center;
+}
+.head .center{
+    width: 240px;
+    height: 100px;
+    float: left;
+    text-align: center;
+}
+.head .center img{
+    margin-top: 14px;
+    width: 73px;
+    height: 73px;
 }

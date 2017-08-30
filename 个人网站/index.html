@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/index.css">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+</head>
+<body>
+    <div id="first">
+        <div id="my-photo"><img src="imgs/img_bg_1.jpg" alt="">
+            <div id="welcome">
+                <div id="container">
+                    <div id="imgs">
+                        <img src="imgs/img_bg_2.jpg" alt="" class="selected">
+                        <img src="imgs/img_bg_1.jpg" alt="">
+                        <img src="imgs/img_bg_3.jpg" alt="">
+                    </div>
+                    <ul id="nav">
+                        <li class="selected"></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                    <div id="arrows">
+                        <span id="prev">&lt;</span>
+                        <span id="next">&gt;</span>
+                    </div>
+                    <div class="text-inner">
+                        <h1>Welocom&nbsp;To&nbsp;My&nbsp;Home&nbsp;！</h1>
+                        <h2>Do&nbsp;You&nbsp;Like&nbsp;Me&nbsp;?</h2>
+                    </div>
+                </div>
+                <div class="generalize-content">
+                    <h1>hahaha</h1>
+                    <div>以人为本，首先体现在视觉对待客户朋友的态度。
+                        视觉自始至终把客户当成有缘相识、相知的朋友，
+                        因此视觉关注客户的每一处要求，率先推出一对一个性
+                        拍摄模式，并且一直致力于拍摄模式的改进，不断为客
+                        户朋友们带来惊喜。其中许多创新模式为同行所效仿，
+                        带动了整个行业的发展，例如“先拍照、后付款”；“不满
+                        意无条件退款”等。长期以来，视觉的诚意与诚恳赢得了朋
+                        友们的尊重，也为视觉的自身发展打下了良好基础。</div>
+                </div>
+            </div>
+        </div>
+        <div class="menu-menu">
+            <div class="menu">
+                <div><img src="imgs/1485616729.gif" alt=""></div>
+                <div class="menu-content">
+                    <ul>
+                        <a href="" class="welcome"><b>欢迎</b><p>HOME</p></a>
+                    </ul>
+                    <ul>
+                        <a href=""><b>关于我</b><p>ABOUT ME</p></a>
+                    </ul>
+                    <ul>
+                        <a href=""><b>项目展示</b><p>PROJECT</p></a>
+                    </ul>
+                    <ul>
+                        <a href=""><b>我的生活</b><p>MY LIFE</p></a>
+                    </ul>
+                    <ul>
+                        <a href=""><b>联系我</b><p>CONTACT</p></a>
+                    </ul>
+                </div>
+            </div>
+            <div class="menu-logo">
+                <div><img src="imgs/menu_icon.svg" alt=""></div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+<script src="jquery-1.12.4.js"></script>
+<script>
+    $(function () {
+        var nowIndex = 0;
+        var $menuContent = $(".menu-content ul");
+        $menuContent.on("mouseover",function () {
+            nowIndex = $(this).index();
+            $menuContent.eq(nowIndex).addClass("selected").siblings().removeClass("selected");
+        });
+    });
+    var menuLogo = $(".menu-logo");
+//    if(){
+//
+//    }
+    menuLogo.on("mouseover",function () {
+        $(".menu").css("display","block")
+    });
+    $(function(){
+        var nowIndex = 0;//当前显示的下标
+        var timer;
+        var $lis = $("#nav li");
+        $lis.on("mouseover", function(){
+            nowIndex = $(this).index();
+            changeImg();
+        });
+        $("#prev").on("click", function(){
+            nowIndex--;
+            if(nowIndex == -1){
+                nowIndex = $lis.length - 1;
+            }
+            changeImg();
+        });
+        $("#next").on("click", function(){
+            nowIndex++;
+            if(nowIndex == $lis.length){
+                nowIndex = 0;
+            }
+            changeImg();
+        });
+        play();
+
+        $("#container").hover(function(){
+            clearInterval(timer);
+        }, function(){
+            play();
+        });
+
+        function play(){
+            timer = setInterval(function(){
+                $("#next").trigger("click");
+            }, 1000);
+        }
+        function changeImg(){
+            $lis.eq(nowIndex).addClass("selected").siblings().removeClass("selected");
+            $("#imgs img").eq(nowIndex).addClass("selected").siblings().removeClass("selected");
+        }
+
+    });
+</script>
+</html>
