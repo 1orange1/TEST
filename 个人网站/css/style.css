@@ -66,12 +66,12 @@ ul{
     width: 180px;
     height: 18px;
     color: #565656;
-    line-height: 1.1;
+    line-height: 1.1; 
     font-size: 17px;
     display: block;
 }
 .menu ul .welcome-home b{
-    color: #666666; 
+    color: #666666;
 }
 .menu ul .welcome-home p{
     color: #08c2ff;
