@@ -8,8 +8,6 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 </head>
 <body>
-    <div id="first">
-        <div id="my-photo"><img src="imgs/img_bg_1.jpg" alt="">
             <div class="welcome">
                 <div id="container">
                     <div id="imgs">
@@ -43,7 +41,6 @@
                         友们的尊重，也为视觉的自身发展打下了良好基础。</div>
                 </div>
             </div>
-        </div>
         <div class="menu-menu">
             <div class="menu">
                 <div><img src="imgs/1485616729.gif" alt=""></div>
@@ -70,7 +67,6 @@
             </div>
         </div>
 
-    </div>
 
 </body>
 <script src="jquery-1.12.4.js"></script>
@@ -83,13 +79,19 @@
             $menuContent.eq(nowIndex).addClass("selected").siblings().removeClass("selected");
         });
     });
-    var menuLogo = $(".menu-logo");
-//    if(){
-//
-//    }
-    menuLogo.on("mouseover",function () {
+
+    var menuMenu = $(".menu-menu");
+    menuMenu.hover(function () {
         $(".menu").css("display","block")
-    });
+        },function () {
+        $(".menu").css("display","none")
+        });
+
+
+
+
+
+
     $(function(){
         var nowIndex = 0;//当前显示的下标
         var timer;
