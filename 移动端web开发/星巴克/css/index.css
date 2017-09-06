@@ -199,6 +199,7 @@ body{
     font-size: 14px;
 }
 
+
 #download-app-container{
     width: 100%;
     height: 220px;
@@ -211,11 +212,8 @@ body{
 #download-app-container .download-app{
     width: 1170px;
     height: 220px;
-    margin-right: auto;
-    margin-left: auto;
-    padding-left: 15px;
-    padding-right: 15px;
-;
+    margin: 0 auto;
+    /*background-color: #aa8e64;*/
 }
 #download-app-container .two-phone{
     /*flex: 0 0 350px;*/
@@ -240,6 +238,18 @@ body{
     -webkit-background-size:contain;
     background-size:contain;
 }
+#download-app-container .qr-code .android{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+#download-app-container .qr-code .android .android-img{
+    float: left;
+    margin-right: 10px;
+    color: #999999;
+    font-size: 20px;
+    margin-top: 8px;
+}
 #download-app-container .qr-code .download-button{
     display: block;
     width: 59px;
@@ -249,11 +259,37 @@ body{
     padding: 3px 5px;
     border-left: 1px solid #000;
     margin: 0;
-    position: absolute;
-    right: 0;
-    bottom: 0;
+    float: left;
+
 }
-#download-app-container {}
+
+#download-app-container .app-content{
+    width: 450px;
+    height: 220px;
+    float: left;
+    display: table;
+}
+#download-app-container .app-content .content-more{
+    display: table-cell;
+    vertical-align: middle;
+    margin: auto;
+}
+#download-app-container .app-content .content-more a:hover{
+    color: #aa8e64;
+}
+#download-app-container .app-content .content-intro{
+    display: block;
+    word-break: break-all;
+    width: 450px;
+    font-size: 25px;
+    line-height: 28px;
+    color: #3d3d3d;
+    margin-bottom: 8px;
+}
+#download-app-container .app-content .content-link{
+    font-size: 14px;
+    color: #b89f7a;
+}
 
 
 
@@ -275,22 +311,11 @@ body{
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+@media (max-width: 1170px) {
+    #download-app-container .download-app{
+        width: 100%;
+    }
+}
 
 
 
@@ -360,7 +385,6 @@ body{
         text-align: right;
     }
 }
-
 
 
 
