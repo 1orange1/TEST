@@ -2,41 +2,222 @@
     margin: 0;
     padding: 0;
 }
-.head .left{
-    background-color: blue;
-    width: 600px;
+a{
+    text-decoration: none;
+}
+body{
+    position: relative;
+}
+.navbar-head{
+    /*background-color: #000;*/
+    width: 100%;
     height: 100px;
-    overflow: hidden;
+}
+.navbar-head .left{
+    width: 41.66666667%;
+    /*background-color: #00c0ff;*/
+    margin: 27px auto;
+    height: 46px;
     float: left;
 }
-.head .left .toggle{
-    margin:27px auto;
-    width: 570px;
-    height: 46px;
+.navbar-head .left img{
+    width: 30px;
+    height: 20px;
+    padding-left:40px;
+
 }
-.head .left .menu{
-    display: block;
-    height: 25px;
-    width: 40px;
-    text-align: center;
-}
-.head .left span{
-    display: block;
-    width: 40px;
-    height: 21px;
-    cursor: pointer;
+.navbar-head .left span{
     font-size: 12px;
     letter-spacing: 0.5px;
-    text-align:center;
+    color: #000;
+    cursor: pointer;
+    display: block;
+    margin-left:43px;
+    margin-top:-4px;
 }
-.head .center{
-    width: 240px;
-    height: 100px;
+.navbar-head .center{
+    width: 16.66666667%;
+    /*background-color: #cccccc;*/
+    margin: 9px auto;
+    height: 73px;
     float: left;
     text-align: center;
 }
-.head .center img{
-    margin-top: 14px;
+.navbar-head .center img{
     width: 73px;
     height: 73px;
+    margin: 0 auto;
+    text-align: center;
+    display: block;
+}
+.navbar-head .right{
+    width: 41.66666667%;
+    /*background-color: #00c0ff;*/
+    margin: 27px auto;
+    height: 46px;
+    float: right;
+}
+.navbar-head .right span{
+    position: absolute;
+    right: 35px;
+    color: #4e4e4e;
+    line-height: 20px;
+    font-size: 16px;
+    text-align: center;
+}
+.navbar-head .right span a{
+    white-space: nowrap;
+    cursor: pointer;
+    color: #b89f7a;
+    font-weight: 700;
+    font-size: 14px;
+    text-decoration: none;
+}
+.navbar-head .right span .left-landing{
+    float: left;
+}
+.navbar-head .right span .right-register{
+    float: right;
+}
+#big-three-coffee{
+    width: 100%;
+    position: relative;
+}
+#big-three-coffee .three-coffee{
+    width: 100%;
+    height: 0;
+    padding-top: 50.5%;
+    background-size: cover;
+
+    background-image: url(../imgs/kv-desktop-cn-20170724152434.jpg);
+    background-repeat:no-repeat;
+}
+#big-three-coffee .desktop{
+    max-width: 100%;
+    height: auto;
+    line-height: 1;
+    display: block;
+}
+#big-three-coffee span{
+    font-size: 18px;
+    color: #fff;
+    position:absolute;
+    right: 35px;
+    bottom: 30px;
+}
+#big-three-coffee p{
+    /*width: 34px;*/
+    line-height: 21px;
+    height: 21px;
+    background: #47474A;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 12px;
+    font-weight: 900;
+    right: 32px;
+    padding: 0px 5px;
+    position: absolute;
+    top: 20px;
+    text-align: center;
+}
+#star-container{
+    width: 100%;
+    height: 220px;
+    background-color: #000;
+}
+#star-container .rewards-mark{
+    width: 780px;
+    height: 220px;
+    margin: 0 auto;
+    /*background-color: #08c2ff;*/
+}
+#star-container .star-card{
+    width: 350px;
+    height: 220px;
+    float:left;
+    /*background-color: #b89f7a;*/
+    display: table;
+}
+#star-container .star-card .double{
+    display: table-cell;
+    vertical-align: middle;
+    margin: 0 auto;
+    text-align: center;
+}
+#star-container .rewards-mark .star-card p{
+    line-height: 28px;
+    color: #ffffff;
+    font-size: 18px;
+    display: block;
+    width: 258px;
+    height: 28px;
+    float: right;
+    text-align: left;
+}
+#star-container .rewards-mark .rewards-logo img{
+    width: 160px;
+    height: 39px;
+    margin: 0 auto;
+}
+#star-container .rewards-content{
+    width: 430px;
+    height: 220px;
+    float: left;
+    display: table;
+    /*background-color: #666666;*/
+}
+#star-container .rewards-content .middle{
+    display: table-cell;
+    vertical-align: middle;
+}
+
+#star-container .rewards-content .star-club{
+    color: #fff;
+    font-size: 25px;
+}
+#star-container .rewards-content .star-travel{
+    color: #fff !important;
+    font-size: 16px !important;
+    margin: 0 0 5px;
+}
+#star-container .rewards-content .star-button{
+    margin-top: 30px;
+}
+#star-container .rewards-content .star-login{
+    border: 2px solid #a98e67;
+    padding: 14px 40px;
+    color: #a98e67;
+}
+#star-container .rewards-content a:hover{
+    background-color: #b89f7a;
+    color: #fff;
+}
+#star-container .rewards-content .star-more{
+    color: #b89f7a;
+    margin-left: 30px;
+    font-size: 14px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width: 991px) {
+    #big-three-coffee .three-coffee{
+        background-image: url(../imgs/kv-mobile-cn-20170724152449.jpg);
+        padding-top:116%;
+
+    }
 }
