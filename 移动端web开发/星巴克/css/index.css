@@ -7,7 +7,9 @@ a{
 }
 body{
     position: relative;
+    height: 2000px;
 }
+/*头部*/
 .navbar-head{
     /*background-color: #000;*/
     width: 100%;
@@ -193,9 +195,88 @@ body{
 }
 #star-container .rewards-content .star-more{
     color: #b89f7a;
-    margin-left: 30px;  
+    margin-left: 30px;
     font-size: 14px;
 }
+
+#download-app-container{
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+    background:url(../imgs/home/app_bg.gif) repeat scroll center;
+    /*background-color: #000;*/
+    /*position: relative;*/
+
+}
+#download-app-container .download-app{
+    width: 1170px;
+    height: 220px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+;
+}
+#download-app-container .two-phone{
+    /*flex: 0 0 350px;*/
+    width: 350px;
+    height: 200px;
+    margin-top: 20px;
+    background: url(../imgs/home/app_device.png) center bottom no-repeat;
+    background-size: contain;
+    float: left;
+}
+#download-app-container .qr-code{
+    width: 242px;
+    height: 209px;
+    float: left;
+    margin: 0 30px 0 60px;
+    position: relative;
+}
+#download-app-container .qr-code .qr-code-img{
+    width: 130px;
+    height: 130px;
+    background: url(../imgs/home/app_qr_20170209.png);
+    -webkit-background-size:contain;
+    background-size:contain;
+}
+#download-app-container .qr-code .download-button{
+    display: block;
+    width: 59px;
+    word-break: break-all;
+    color: #3d3d3d;
+    font-size: 13px;
+    padding: 3px 5px;
+    border-left: 1px solid #000;
+    margin: 0;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+#download-app-container {}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -221,3 +302,88 @@ body{
 
     }
 }
+@media (max-width: 767px) {
+    #star-container{
+        height: auto;
+    }
+    #star-container .rewards-mark{
+        width: auto;
+        height: auto;
+        padding-right: 30px;
+        padding-left: 30px;
+        /*background-color: #08c2ff;*/
+    }
+    #star-container .star-card{
+        width: 100%;
+        height: 180px;
+    }
+    #star-container .rewards-mark .star-card p{
+        text-align: center;
+        display: block;
+        width: 100%;
+        float: none;
+    }
+
+    #star-container .rewards-content{
+        width: 100%;
+        height: 310px;
+        float: none;
+        display: table;
+        /*background-color: #666666;*/
+    }
+    #star-container .rewards-content .middle{
+        display: block;
+    }
+
+    #star-container .rewards-content .star-club{
+        text-align: center;
+    }
+    #star-container .rewards-content .star-travel{
+        font-size: 18px;
+        margin: 15px 0 20px;
+        line-height: 28px;
+        text-align: center;
+
+    }
+    #star-container .rewards-content .star-button{
+        padding: 14px 10%;
+        text-align: center;
+    }
+    #star-container .rewards-content .star-login{
+        margin-bottom: 8px;
+        display: block;
+
+    }
+    #star-container .rewards-content .star-more{
+        display: block;
+        width: 100%;
+        text-align: right;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
