@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        #container{
+            position: relative;
+            top: 200px;
+            left: 200px;
+        }
+        #container img{
+            box-shadow: 5px 5px 5px rgba(50, 50, 50, .4);
+            border: 5px solid #7e7c7c ;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: all 2s;
+        }
+        #container img:first-child{
+            -webkit-transform: rotate(40deg);
+            -moz-transform: rotate(40deg);
+            -ms-transform: rotate(40deg);
+            -o-transform: rotate(40deg);
+            transform: rotate(40deg);
+        }
+        #container img:last-child{
+            -webkit-transform: rotate(-30deg);
+            -moz-transform: rotate(-30deg);
+            -ms-transform: rotate(-30deg);
+            -o-transform: rotate(-30deg);
+            transform: rotate(-30deg);
+        }
+        #container img:hover{
+            z-index: 1;
+            transform: scale(1.2)  rotate(0deg);
+            -webkit-transform:scale(1.2) rotate(0deg);
+            /*-moz-transform:scale(1.2) rotate(0deg);*/
+            -ms-transform:scale(1.2) rotate(0deg);
+            -o-transform:scale(1.2) rotate(0deg);
+            box-shadow: 10px 10px 5px rgba(50, 50, 50, .4);
+        }
+
+
+
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <div id="container">
+        <img src="img01.jpg" alt="">
+        <img src="img02.jpg" alt="">
+    </div>
+</body>
+</html>
