@@ -32,22 +32,39 @@
 <script src="js/jquery-1.12.4.js"></script>
 <script src="js/jquery.cookie.js"></script>
 <script>
-    $(function(){
+    $(function () {
         if($.cookie("skin")){
-            changeSkin($.cookie("skin"));
+            var skin = $.cookie("skin");
+            $("#cssfile").attr("href","css/"+skin+".css");
+            $("#"+skin).addClass("selected").siblings().removeClass("selected");
+
         }
 
         $("#skin li").on("click", function(){
             var skin = $(this).attr("id");
             $.cookie("skin", skin, {expires: 30});
-            changeSkin(skin);
+            $("#cssfile").attr("href", "css/"+ skin + ".css");
+            $(this).addClass("selected").siblings().removeClass("selected");
         });
 
-        function changeSkin(skin){
-            $("#cssfile").attr("href", "css/"+ skin + ".css");
-            $("#" + skin).addClass("selected").siblings().removeClass("selected");
-        }
     });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </script>
 
 </body>
