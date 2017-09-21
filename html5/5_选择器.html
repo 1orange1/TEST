@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <ul id="ul1">
+        <li>01</li>
+        <li class="aa">02</li>
+        <li class="aa">03</li>
+        <li>04</li>
+        <li>05</li>
+    </ul>
+    <div id="div1">div</div>
+
+
+    <script>
+        var oUl1 = document.getElementById("ul1");
+        var oLi = document.getElementsByTagName("li");
+//        document.getElementsByName("username");
+//        document.getElementsByClassName("aa");
+
+        function getByClass(className,context) {
+            context = context || document;
+            if(context.document.getElementsByClassName()){
+                return context.getElementsByClassName(className);
+            }else{
+                var result = [];
+                var arr = context.getElementsByTagName("*");
+                for(i = 0; i<arr.length; i++){
+                    if(arr[i].className.indexOf(className) != -1){
+                        result.push(arr[i]);
+                    }
+                }
+                return result;
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
