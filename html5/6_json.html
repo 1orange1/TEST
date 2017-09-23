@@ -20,12 +20,18 @@
             }
         };
 
-        var obj2 = clone(obj1);
-        obj1.father.name = "lisi";
-        console.log(obj2.father.name);
 
+//       简单的实现深拷贝
+//        var str = JSON.stringify(obj1);
+//        var oo = JSON.parse(str);
+//        oo.name = "lisi";
+//        console.log(obj.name);
+
+
+
+//        //复杂
         function clone(obj) {
-            var newObj = [];
+            var newObj = {};
             for (var p in obj){
                 if(typeof obj[p] == "object"){
                     newObj[p] = clone(obj[p]);// newObj[p] = arguments.callee(obj[p]);
@@ -36,17 +42,24 @@
             return newObj;
         }
 
+        var obj2 = clone(obj1);
+        obj1.father.name = "lisi";
+        console.log(obj2.father.name);
 
 
-        var str1 = JSON.stringify(obj1);
-        var obj3 = JSON.parse(str1);
-        obj1.father.name = "xx";
-        console.log(obj3)
+        function f() {
+            console.log()
+        }
+
+
+
+        //        var str1 = JSON.stringify(obj1);
+//        var obj3 = JSON.parse(str1);
+//        obj1.father.name = "xx";
+//        console.log(obj3)
 
 
 //        eval("while(true){alert(123);}");
-
-
 
 
 
