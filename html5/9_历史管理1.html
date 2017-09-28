@@ -19,14 +19,14 @@
 //            closes.innerHTML = "是";
 //        }
 
-        var oBtn = document.getElementById("btn");
-        var oResult = document.getElementById("result");
+          var oBtn = document.getElementById("btn");
+          var oResult = document.getElementById("result");
+          var obj = {};
+          oBtn.onclick = function(){
+              var result = [];
+            for (var i = 0; i < 5; i++) {
 
-        var obj = {};
-        oBtn.onclick = function () {
-            var result = [];
-            for(var i = 0;i<5;i++){
-                result.push( Math.ceil(Math.random()*10));
+                result.push(Math.ceil(Math.random() * 10));
             }
             oResult.innerHTML = result;
 
@@ -36,6 +36,34 @@
         window.onhashchange = function () {
             oResult.innerHTML = obj[location.hash];
         };
+
+
+
+
+
+
+
+//        var oBtn = document.getElementById("btn");
+//        var oResult = document.getElementById("result");
+//
+//        var obj = {};
+//        oBtn.onclick = function () {
+//            var result = [];
+//            for(var i = 0;i<5;i++){
+//                result.push( Math.ceil(Math.random()*10));
+//            }
+//            oResult.innerHTML = result;
+//
+//            location.hash = Math.random();
+//            obj[location.hash] = result;
+//        };
+//        window.onhashchange = function () {
+//            oResult.innerHTML = obj[location.hash];
+//        };
+
+
+
+
 
     </script>
 
