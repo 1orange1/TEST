@@ -9,14 +9,13 @@ ul{
     list-style: none;
 }
 body{
-    background-image: url(../imgs/img_bg_1.jpg);
+    background-color: #e8e8e8;
     width:100%;
     -webkit-background-size:cover;
     background-size:cover;
 }
 #first{
     float: left;
-
 }
 #imgs img{
     width: 100%;
@@ -40,7 +39,6 @@ body{
 .menu{
     float: left;
     background-color: #fff;
-    display: none;
 }
 .menu img{
     width: 200px;
@@ -82,14 +80,27 @@ body{
 }
 ul.selected{
     background-color: #00c0ff;
-    animation: 3s;
+    animation: xx 1s linear reverse;
+}
+@keyframes xx {
+    from{
+        width: 200px;
+    }
+    to{
+        width: 10px;
+    }
 }
 .welcome{
     width: 1100px;
     height: 750px;
-    background-color: #fff;
+
     margin: 100px auto;
     border-radius: 1%;
+}
+.welcome hr{
+    color: #000;
+    size: 3px;
+    width: 1300px;
 }
 #container{
     width: 680px;
@@ -126,13 +137,15 @@ ul.selected{
 #nav li, #arrows span{
     width: 20px;
     height: 20px;
-    background: #000000;
+    background: #505755;
     color: #fff;
     text-align: center;
+    color: #000000;
     line-height: 20px;
     cursor: pointer;
     float: left;
     margin-right: 5px;
+    border-radius: 50%;
 }
 #nav li{
     width: 10px;

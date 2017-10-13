@@ -12,7 +12,7 @@
 
 
     <script>
-  
+
 //        var closes = document.getElementById("btn");
 //        closes.onmouseover = function () {
 //
@@ -24,18 +24,17 @@
           var obj = {};
           oBtn.onclick = function(){
               var result = [];
-            for (var i = 0; i < 5; i++) {
+              for (var i = 0; i < 5; i++) {
+                  result.push(Math.ceil(Math.random() * 10));
+              }
+              oResult.innerHTML = result;
 
-                result.push(Math.ceil(Math.random() * 10));
-            }
-            oResult.innerHTML = result;
-
-            location.hash = Math.random();
-            obj[location.hash] = result;
-        };
-        window.onhashchange = function () {
-            oResult.innerHTML = obj[location.hash];
-        };
+              location.hash = Math.random();
+              obj[location.hash] = result;
+          };
+          window.onhashchange = function () {
+              oResult.innerHTML = obj[location.hash];
+          };
 
 
 
