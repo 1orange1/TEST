@@ -1,3 +1,6 @@
+/**
+ * Created by wuzhi on 2017/10/31.
+ */
 require.config({
     paths:{
         jquery:'jquery-1.12.4'
