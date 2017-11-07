@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #app{
+            width: 300px;
+            margin: 0 auto;
+        }
+        h1{
+            text-align: center;
+        }
+        li{
+            height: 30px;
+            background-color: green;
+            list-style: none;
+            margin: 10px;
+            padding: 10px;
+            line-height: 30px;
+        }
+        span{
+            float: right;
+        }
+        .red{
+            background-color:red;
+        }
+        .green{
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <h1>services</h1>
+        <ul v-for="(obj,index) in arr" @click="obj.active = !obj.active" :class="{red:obj.active,green:!obj.active}">
+            <li>{{obj.name}}<span>{{obj.price}}</span></li>
+        </ul>
+        <hr>
+        total: <span>0</span>
+    </div>
+
+<script src="vue.js"></script>
+<script>
+    new Vue({
+        el:'#app',
+        data:{
+            arr:[
+                {name:'aaa',price:233,active:false},
+                {name:'bbb',price:345,active:false},
+                {name:'ccc',price:455,active:false},
+                {name:'ddd',price:767,active:false},
+                {name:'eee',price:564,active:false},
+                {name:'fff',price:732,active:false}
+            ]
+        },
+            methods:{
+                change(obj){
+                    obj.active = !obj.active;
+                }
+            }
+        })
+</script>
+</body>
+</html>
