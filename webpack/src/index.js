@@ -1,5 +1,4 @@
 /**
- * Created by wuzhi on 2017/10/26.
+ * Created by wuzhi on 2017/11/12.
  */
-var oDiv1 = document.getElementById('div1');
-oDiv1.innerHTML = "hello";
+document.getElementById('div1').innerHTML = 'hellohdhfh world';

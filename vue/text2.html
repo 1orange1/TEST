@@ -37,8 +37,10 @@
 <body>
     <div id="app">
         <h1>services</h1>
-        <ul v-for="(obj,index) in arr" @click="obj.active = !obj.active" :class="{red:obj.active,green:!obj.active}">
-            <li>{{obj.name}}<span>{{obj.price}}</span></li>
+        <ul>
+            <li v-for="(obj,index) in arr" @click="obj.active = !obj.active"
+                :class="{red:obj.active,green:!obj.active}">
+                {{obj.name}}<span>{{obj.price}}</span></li>
         </ul>
         <hr>
         total: <span>0</span>
