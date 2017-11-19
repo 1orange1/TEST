@@ -1,14 +1,75 @@
 const  path = require('path');
+const  glob = require('glob');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const Uglify = require('uglifyjs-webpack-plugin');
+const webpack =  require('webpack');
+const purifycssWebpack = require('purifycss-webpack');
+const entry = require('./webpack-config/entry_webpack');
 module.exports = {
-  entry:{
-      entry:"./src/index.js"
-  },
+  entry:entry,
   output:{
       path:path.resolve(__dirname,'dist'),
       filename:'[name].js'
   },
     module:{
+        rules:[
+            {
+                test:/\.css$/,
+                // use:['style-loader','css-loader']
+                // use:[
+                //     {
+                //         loader:'style-loader'
+                //     },{
+                //     loader:'css-loader'
+                //     }
+                // ]
+                use:ExtractTextPlugin.extract({
+                    fallback:"style-loader",
+                    use: [
+                        {
+                            loader:"css-loader",
+                            options:{importLoaders:1}
+                        },
+                        "postcss-loader"
+                    ]
+                })
+            },
+            {
+                test:/\.(png|jpg|gif)/,
+                use:[{
+                    loader:'url-loader',
+                    options:{
+                        limit:50000000,
+                        outputPath:'img/'
+                    }}
+                ]
+
+            },{
+                test:/\.(html|htm)$/i,
+                loader:'html-withimg-loader'
+            },
+            {
+                test:/\.scss/,
+                    // use:['style-loader'
+                    //     ,'css-loader'
+                    //     ,'sass-loader'
+                    // ]
+                use: ExtractTextPlugin.extract({
+                    fallback: "style-loader",
+                    use: ["css-loader","sass-loader"]
+                })
+            },{
+                test:/\.js$/,
+                use:{
+                    loader:"babel-loader",
+                    options:{
+                        presets:['env']
+                    }
+                },
+                exclude:/node_modules/
+            }
+        ]
 
     },
     plugins:[
@@ -18,7 +79,14 @@ module.exports = {
             },
             hash:true,
             template:'./src/index.html'
-        })
+        }),
+        new ExtractTextPlugin("css/index.css"),
+        // new UglifyJsPlugin()
+        new purifycssWebpack({
+            // Give paths to parse for rules. These should be absolute!
+            paths: glob.sync(path.join(__dirname, 'src/*.html')),
+        }),
+        new webpack.BannerPlugin("成哥所有")
     ],
     devServer:{
         contentBase:path.resolve(__dirname,'dist'),
