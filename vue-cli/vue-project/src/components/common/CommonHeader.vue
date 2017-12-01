@@ -1,18 +1,15 @@
 <template>
-  <div class="header">
+  <div class="header" :style="{
+    background:bgColor
+  }">
     <button>首页 </button>
-    <h2>movie</h2>
+    <h2>{{title}}</h2>
   </div>
 </template>
 
 <script>
   export default {
-    name: 'HelloWorld',
-    data () {
-      return {
-//        msg: 'Welcome to Your Vue.js App'
-      }
-    }
+      props:['title','bgColor']
   }
 </script>
 

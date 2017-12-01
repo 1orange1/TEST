@@ -1,0 +1,36 @@
+$aa:#ff0044;
+$test:'.test';
+$font:'font';
+
+#{$test+1}{
+  color: #000;
+  #{$font + '-size'}:30px;
+}
+
+body{
+  color: $aa;
+  font-size: 30px;
+  margin: 29px;
+  padding: 20px{
+    left: 50px;
+    right: 5px;
+  };
+}
+ul{
+  background-color: $aa;
+  li{
+    color: #ff0000;
+    a{
+      font-size: 20px;
+      &:hover{
+        font-size: 40px;
+      }
+      &::after{
+        content: "";
+      }
+      &-test{
+        padding: 20px;
+      }
+    }
+  }
+}

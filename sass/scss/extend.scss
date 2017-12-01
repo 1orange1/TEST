@@ -1,0 +1,10 @@
+@import "base";
+div{
+  color: #0000aa;
+  a{
+    text-decoration: none;
+  }
+}
+p{
+  @extend div;
+}
