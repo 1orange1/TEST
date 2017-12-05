@@ -1,17 +1,12 @@
 <template>
   <div class='movie'>
-      <common-header title="movie" bgColor ='rb(33,150,243)'></common-header>
+      <common-header title="movie" bgColor ='rgb(33,150,243)'></common-header>
       <movie-nav></movie-nav>
-      <div class="list-box">
-        <movie-list v-for="(objg,index) in movieList" :key="index" :title="obj.nm"
-                    :year = "obj.snum" :img = "obj.img" :avg = "obj.sc" :desc = "obj.cat"
-        >
-        </movie-list>
-      </div>
+      <router-view></router-view>
       <div class="loading" v-show="isShow">
         <img src="/static/img/loading.gif" alt="">
       </div>
-      <common-footer></common-footer>
+      <common-footer bgColor ='rgb(33,150,243)'></common-footer>
   </div>
 </template>
 <script>
@@ -48,7 +43,7 @@ import Axios from 'axios'
         },
       mounted(){
 
-        Axios.get(API_PROXY + "http://m.maoyan.com/movie/list.json?type=hot&offset=0&limit=10")
+        Axios.get(API_PROXY + "http://m.maoyan.com/movie/list.json?type=hot&offset="+this.movieList.length+"&limit=10")
           .then((res)=>{
             this.movieList = res.data.data.movies;
 
