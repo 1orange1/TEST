@@ -1,8 +1,11 @@
 <template>
   <div id="music-list">
     <ul class="albums">
-      <li v-for='obj in musicList' :key="obj.id" :style="{background:'url('+obj.bg+') no-repeat'}">
 
+      <li v-for='obj in musicList' :key="obj.id">
+            <router-link :to="'/music/music_player/'+obj.id">
+              <img :src="obj.bg" alt="">
+            </router-link>
       </li>
     </ul>
   </div>
@@ -39,5 +42,9 @@
     float: left;
     -webkit-background-size:;
     background-size:contain;
+  }
+  .albums li img{
+    width: 100%;
+    height: 100%;
   }
 </style>

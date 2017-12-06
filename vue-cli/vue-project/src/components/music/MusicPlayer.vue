@@ -1,43 +1,50 @@
 <template>
-  <div id="music-list">
-    <ul class="albums">
-      <li v-for='obj in musicList' :key="obj.id" :style="{background:'url('+obj.bg+') no-repeat'}">
-
-      </li>
-    </ul>
+  <div class='player'>
+      <a-player :music = 'musicList'  :showlrc='3' :mutex='true' :autoplay="true" v-if='isShow'></a-player>
   </div>
 </template>
 <script>
-
-  import Axios from 'axios'
-  export default{
+import APlayer from 'vue-aplayer'
+import Axios from 'axios'
+export default {
     data(){
-      return{
-        musicList:[]
-      }
+        return{
+          musicData:[],
+          musicList:[],
+          isShow:false
+        }
     },
-    mounted(){
-      Axios.get('/static/musiclist.json')
-        .then((res)=>{
-        this.musicList = res.data.albums;
-    })
+    beforeCreate(){
+          Axios.get('/static/music-data.json')
+          .then((res)=>{
+                this.musicData = res.data.musicData;
+                for(var i=0; i<this.musicData.length; i++){
+                   var obj = new Object();
+                    obj.title = this.musicData[i].title;
+                    obj.author = this.musicData[i].author;
+                    obj.url = this.musicData[i].src;
+                    obj.pic = this.musicData[i].musicImgSrc;
+                    obj.lrc = "/static/"+this.musicData[i].lrc;
+
+                   this.musicList.push(obj);
+                }
+                this.isShow = true;
+          });
+
+
+    },
+    components:{
+          APlayer
+    }
+}
+</script>
+<style>
+
+    .player{
+        margin-top:1rem;
     }
 
 
-  }
-</script>
-<style>
-  .albums{
-    position: absolute;
-    top: 1rem;
-    bottom: 1rem;
-    width: 100%;
-  }
-  .albums li{
-    width: 50%;
-    height: 33.33%;
-    float: left;
-    -webkit-background-size:;
-    background-size:contain;
-  }
+
+
 </style>
