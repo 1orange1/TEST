@@ -30,7 +30,7 @@
     color     : #fff;
     font-size : 30px;
     text-align: center;
-    /*margin-top: 1rem;*/
+    margin-top: 1rem;
 
   }
 
