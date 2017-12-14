@@ -1,5 +1,5 @@
 <template>
-  <div class='footer' :style ="{background:bgColor}">
+  <div class='footer' style="{'bgcolor:bgColor'}">
       <ul>
           <li><router-link to ='/movie'>电影</router-link></li>
           <li><router-link to ='/music'>音乐</router-link></li>

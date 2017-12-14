@@ -1,0 +1,34 @@
+{
+  "discoverList":[
+    {
+      "title": "海外晨报|演员工会奖公布提名名单，明年的奥斯卡影帝影后都在这里了",
+      "read":588,
+      "img": "static/img/soar_music.jpg"
+    },
+    {
+      "title": "新歌榜",
+      "read":9896,
+      "img":"static/img/new_music.jpg"
+    },
+    {
+      "title": "原创榜",
+      "read":256,
+      "img":"static/img/original_music.jpg"
+    },
+    {
+      "title": "KTV麦榜",
+      "read":465,
+      "img":"static/img/ktv_music.jpg"
+    },
+    {
+      "title": "华语金曲榜",
+      "read":4557,
+      "img":"static/img/chinese_music.jpg"
+    },
+    {
+      "title": "我的专辑",
+      "read":543,
+      "img":"static/img/my_music.jpg"
+    }
+  ]
+}

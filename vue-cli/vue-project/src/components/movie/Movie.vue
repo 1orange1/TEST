@@ -41,7 +41,7 @@ import Axios from 'axios'
 //                }
                 ],
               isShow   : false
-            }
+            };
 //        },
 //      mounted(){
 //
