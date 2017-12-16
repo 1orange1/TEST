@@ -27,8 +27,9 @@
   .d-nav{
     height    : 1rem;
     background: #ffffff;
-    position  : fixed;
+    /*position  : fixed;*/
     width: 100%;
+    z-index: 1;
   }
   .d-nav ul{
     color: #333333;

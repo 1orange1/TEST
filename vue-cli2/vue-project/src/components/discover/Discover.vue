@@ -3,7 +3,9 @@
       <div class="d-title">发现</div>
     <common-scroll class="d-scroll"></common-scroll>
       <discover-nav></discover-nav>
-      <router-view></router-view>
+      <div class="discover-content">
+        <router-view></router-view>
+      </div>
       <common-footer></common-footer>
     </div>
 </template>
@@ -42,5 +44,7 @@ import Axios from 'axios'
   .discover .d-scroll{
     margin-top: auto;
   }
-
+  .discover .discover-content{
+    margin-bottom: 16rem;
+  }
 </style>
