@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <ul>
+  <div class="message">
+    <ul class="messagelist">
       <li>想看的电影</li>
       <li>看过的电影</li>
       <li>邀请好友&nbsp;抢免费电影票</li>
@@ -11,8 +11,24 @@
   </div>
 </template>
 <script>
+  export default{
+    data:{
 
+    }
+
+
+  }
 </script>
 <style>
-
+  .message{
+    margin-left: 0.2rem;
+  }
+  .message li{
+    height: 0.8rem;
+    line-height: 0.8rem;
+    border-bottom: 1px #f1f1f1 solid;
+  }
+  .message li span{
+    float: right;
+  }
 </style>

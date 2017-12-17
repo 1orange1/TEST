@@ -29,7 +29,7 @@
     margin-left: 0.25rem;
     padding-top:0.22rem;
     padding-bottom:0.2rem;
-    border-bottom:0.1px #e8e8e8 solid;
+    border-bottom:0.1px #ededed solid;
     margin-bottom: 0;
   }
   .cinema-list .vip{
