@@ -12,7 +12,7 @@
 <script>
 import CommonScroll from "../common/CommonScroll.vue"
 import CommonFooter from "../common/CommonFooter.vue"
-import DiscoverNav from "../discover/DiscoverNav.vue"
+import DiscoverNav from "../common/DiscoverUserNav.vue"
 import Axios from 'axios'
   export default{
     data(){

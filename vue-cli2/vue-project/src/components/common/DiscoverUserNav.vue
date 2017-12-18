@@ -21,7 +21,9 @@
 </div>
 </template>
 <script>
+  export default{
 
+  }
 </script>
 <style>
   .d-nav{
