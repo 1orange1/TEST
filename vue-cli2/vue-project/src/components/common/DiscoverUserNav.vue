@@ -2,26 +2,27 @@
 <div class="d-nav">
   <ul>
     <li>
-        <i class="fa fa-file-text-o" aria-hidden="true"></i><br>
-        台词
+        <i :class="icon1" aria-hidden="true"></i><br>
+        {{nav1}}
     </li>
     <li>
-      <i class="fa fa-commenting-o" aria-hidden="true"></i><br>
-        话题
+      <i :class="icon2" aria-hidden="true"></i><br>
+      {{nav2}}
     </li>
     <li>
-      <i class="fa fa-bar-chart" aria-hidden="true"></i><br>
-        票房
+      <i :class="icon3" aria-hidden="true"></i><br>
+      {{nav3}}
     </li>
     <li>
-        <i class="fa fa-bullseye" aria-hidden="true"></i><br>
-        演出
+        <i :class="icon4" aria-hidden="true"></i><br>
+      {{nav4}}
     </li>
   </ul>
 </div>
 </template>
 <script>
   export default{
+    props  : ['nav1',"nav2","nav3","nav4","icon1","icon2","icon3","icon4"]
 
   }
 </script>

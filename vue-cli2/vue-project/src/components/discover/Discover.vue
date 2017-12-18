@@ -2,7 +2,8 @@
     <div class="discover">
       <div class="d-title">发现</div>
     <common-scroll class="d-scroll"></common-scroll>
-      <discover-nav></discover-nav>
+      <discover-nav nav1="台词" nav2="话题" nav3="票房" nav4="演出"
+      icon1="fa fa-file-text-o" icon2="fa fa-commenting-o" icon3="fa fa-bar-chart" icon4="fa fa-bullseye"></discover-nav>
       <div class="discover-content">
         <router-view></router-view>
       </div>

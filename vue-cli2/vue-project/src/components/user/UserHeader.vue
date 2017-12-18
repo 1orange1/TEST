@@ -12,6 +12,8 @@
         </div>
       </div>
     </div>
+    <div class="message-centre"><span>会员中心</span><span>&gt;</span></div>
+    <div class="break"></div>
   </div>
 </template>
 <script>
@@ -55,6 +57,19 @@
     border: none;
     padding-left: 0.2rem;
   }
+  .user-header .message-centre{
+    height: 0.8rem;
+    line-height: 0.8rem;
+    background-color: #ffffff;
+    margin-left: 5%;
+
+  }
+  .user-header .break{
+    height: 0.2rem;
+    background-color:#f5f5f5;
+
+  }
 
 
 </style>
+}
