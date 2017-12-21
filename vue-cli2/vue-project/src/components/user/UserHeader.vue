@@ -12,7 +12,7 @@
         </div>
       </div>
     </div>
-    <div class="message-centre"><span>会员中心</span><span>&gt;</span></div>
+    <div class="message-centre">会员中心<span>&gt;</span></div>
     <div class="break"></div>
   </div>
 </template>
@@ -58,11 +58,16 @@
     padding-left: 0.2rem;
   }
   .user-header .message-centre{
+
     height: 0.8rem;
     line-height: 0.8rem;
     background-color: #ffffff;
-    margin-left: 5%;
-
+    width: 90%;
+    margin: 0 auto;
+  }
+  .user-header .message-centre span{
+    float: right;
+    color: #a3a3a3;
   }
   .user-header .break{
     height: 0.2rem;

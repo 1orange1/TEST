@@ -32,14 +32,14 @@
 <style>
   .discover-list{
     position: absolute;
-    top: 5.0rem;
+    top     : 5.2rem;
     bottom  : 1rem;
     width   : 100%;
 
   }
   .discover-list li{
     width : 90%;
-    height: 1.6rem;
+    height: 1.5rem;
     margin: 0 auto;
     display: block;
     padding: 0.4rem 0;

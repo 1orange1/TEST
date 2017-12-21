@@ -21,6 +21,7 @@ import Axios from 'axios'
         discoverlist: []
       }
     },
+    //http://m.maoyan.com/movie/list.json?type=hot&offset=#type=cinemas
     mounted(){
       Axios.get('/static/discoverlist.json')
         .then((res)=>{

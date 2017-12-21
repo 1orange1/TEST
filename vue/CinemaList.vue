@@ -10,25 +10,13 @@
 
 </template>
 <script>
-  import Axios from 'axios'
   export default {
     props: ['cname','caddr','vip','cdes','money'],
     data () {
       return {
-        cinemaList: [],
-//http://m.maoyan.com/movie/list.json?type=hot&offset=
+//http://m.maoyan.com/movie/list.json?type=hot&offset=#type=cinemas
       }
-    },
-//    mounted(){
-//
-//      Axios.get(API_PROXY + "http://m.maoyan.com/cinemas/list.json?#type=cinemas"+this.cinemaList.length+"&limit=10")
-//        .then((res)=>{
-//          //this.cinemaList = res.data.data.movies;
-//          console.log(res.data.data.movies);
-//
-//
-//        });
-//    }
+    }
   }
 </script>
 <style scoped>

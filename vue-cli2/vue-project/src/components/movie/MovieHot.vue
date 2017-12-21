@@ -1,7 +1,7 @@
 <template>
-  <div class='list'>
-    <movie-list v-for="(obj,index) in movieList" :key="index" :title="obj.nm" :year="obj.snum"
-                :avg = "obj.sc" :img = "obj.img" :desc = "obj.cat"
+  <div class='lis'>
+    <movie-list v-for="(obj,index) in movieList" :key="index" :title="obj.nm" :star="obj.star"
+                :avg = "obj.sc" :img = "obj.img" :desc = "obj.dir" :ver="obj.ver"
     ></movie-list>
   </div>
 </template>
@@ -33,6 +33,7 @@
       loadData(){
         Axios.get(API_PROXY + "http://m.maoyan.com/movie/list.json?type=hot&offset="+this.movieList.length+"&limit=10")
           .then((res)=>{
+//            console.log(this.movieList.concat(res.data.data.movies));
             this.movieList = this.movieList.concat(res.data.data.movies);
             this.isShow    = false;
           });
@@ -44,7 +45,7 @@
   }
 </script>
 <style scoped>
-  .list{
-    margin-bottom: 1rem;
+  .lis{
+    margin-bottom: 2rem;
   }
 </style>
