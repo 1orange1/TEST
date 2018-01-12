@@ -12,6 +12,7 @@
 <script>
   import Axios from 'axios'
   export default {
+
     props: ['cname','caddr','vip','cdes','money'],
     data () {
       return {
