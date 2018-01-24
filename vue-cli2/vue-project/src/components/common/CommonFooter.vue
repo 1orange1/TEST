@@ -11,6 +11,10 @@
           影院</router-link>
       </li>
       <li>
+        <router-link to ='/show'> <i class="fa fa-codepen" aria-hidden="true"></i><br>
+          演出</router-link>
+      </li>
+      <li>
         <router-link to ='/discover'> <i class="fa fa-bandcamp" aria-hidden="true"></i><br>
           发现</router-link>
       </li>

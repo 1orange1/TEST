@@ -6,7 +6,7 @@
       <i class="fa fa-sort-desc" aria-hidden="true"></i>
     </div>
     <div class="ipt">
-    <input value="搜影片，影院，影人" style="border-radius:10px">
+    <input placeholder="搜影片，影院，影人" style="border-radius:10px">
     </div>
     <div class="icon">
         <i class="fa fa-plus-square-o" aria-hidden="true"></i>
@@ -23,6 +23,9 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+  input{
+    outline: none;
+  }
   .movie-header{
     height    : 0.8rem;
     display   : flex;
@@ -47,6 +50,7 @@
     padding-left: 0.1rem;
   }
   .movie-header .ipt{
+
     width: 70%;
   }
   .movie-header input{
